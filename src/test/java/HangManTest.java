@@ -10,4 +10,9 @@ public class HangManTest {
       HangMan newGame=new HangMan("black");
       assertEquals(true, newGame instanceof HangMan);
     }
+    @Test
+    public void HangMan_willgetconstructor_string(){
+      HangMan newGame=new HangMan("black");
+      assertEquals("black",newGame.getUser());
+    }
 }
