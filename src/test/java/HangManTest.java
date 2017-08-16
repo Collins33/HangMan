@@ -15,4 +15,9 @@ public class HangManTest {
       HangMan newGame=new HangMan("black");
       assertEquals("black",newGame.getUser());
     }
+    @Test
+    public void HangMan_willgetconstructor_int(){
+      HangMan newGame=new HangMan("black");
+      assertEquals(0,newGame.getScore());
+    }
 }
