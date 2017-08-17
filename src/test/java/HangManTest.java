@@ -20,4 +20,5 @@ public class HangManTest {
       HangMan newGame=new HangMan("black");
       assertEquals(0,newGame.getScore());
     }
+    
 }
