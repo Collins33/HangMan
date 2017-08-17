@@ -36,6 +36,13 @@ public static void main(String[] args) {
           }
         }
         System.out.println(myScore);
+        if(myScore == 5){
+            System.out.println("You won!!!");
+        }
+        else if(myScore<5){
+            System.out.println("you loose!!");
+        }
+
 
 
 
