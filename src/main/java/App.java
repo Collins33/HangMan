@@ -12,13 +12,14 @@ public static void main(String[] args) {
         Console myConsole=System.console();
         Random myRandomGenerator = new Random();
         List<String> myWords=new ArrayList<String>();
-        
+        int myScore=0;
         myWords.add("snake");
         myWords.add("tiger");
         myWords.add("shark");
         myWords.add("whale");
         myWords.add("viper");
         String myWord=myWords.get(myRandomGenerator.nextInt(5));
+        String[] myLetters=myWord.split("");
         System.out.println("I am a 5 letter word and I am also an animal.Can you guess who I am:");
         String userWord=myConsole.readLine();
         HangMan newGame=new HangMan(userWord);
@@ -26,6 +27,16 @@ public static void main(String[] args) {
         String[] userLetters=newGame.getUser().split("");
         System.out.println(userLetters[1]);
         System.out.println(myWord);
+        System.out.println(myLetters[1]);
+
+        for(int i=0;i<myLetters.length;i++){
+          if(userLetters[i].equals(myLetters[i])){
+            myScore+=1;
+
+          }
+        }
+        System.out.println(myScore);
+
 
 
 }
